@@ -1,0 +1,14 @@
+@import "./style.css";
+@import "./os.css";
+@import "./about.css";
+html[lang="zh-CN"] .sw-big,html[lang="zh-CN"] .sw-quote{font-family:Inter,"Microsoft YaHei",sans-serif;font-size:8vw;font-weight:900;line-height:1.15}html[lang="zh-CN"] .sw-big .ln,html[lang="zh-CN"] .sw-quote .ln{line-height:1.15}.sw-photo img{object-position:center 24%}.sw-ig{opacity:.95}.works-note{z-index:3}.profile-history{padding:80px 7vw;display:grid;grid-template-columns:1fr 2fr;gap:40px;border-top:1px solid #ccc}.profile-history h3{font-size:28px}.profile-history article{padding:24px 0;border-bottom:1px solid #ddd}.profile-history h4{font-size:25px;margin:0}.profile-history p{margin:10px 0}.f-note{white-space:pre-wrap}.content .sw-word{font-size:22vw}
+.section-mount{display:contents}body{display:block!important}
+#about-title .c5{grid-column:2/-1!important;padding-left:0;font-size:11vw}html[lang="zh-CN"] #about-title .c5{font-size:7vw}
+.sw-formcard{grid-template-columns:minmax(0,1fr)}
+.sw-formcard>*{min-width:0;max-width:100%}
+.sw-fields{grid-template-columns:repeat(2,minmax(0,1fr))}
+.sw-fields label,.sw-fields input,.sw-fields textarea{min-width:0;width:100%;box-sizing:border-box}
+.f-note{overflow-wrap:anywhere;z-index:1}
+html[lang="zh-CN"] .sw-formcard h3{font-family:Inter,"Microsoft YaHei",sans-serif;line-height:1.15;font-size:8vw}
+html[lang="zh-CN"] .nums-title{font-family:Inter,"Microsoft YaHei",sans-serif;font-size:8vw;line-height:1.15}
+.profile-history{position:relative;background:#fff}
