@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Xianlin Lu — Design & Technology",
-  description: "AIGC designer and digital interaction designer. Exploring human–computer interaction, immersive experiences, and visual communication.",
+  description: "Xianlin Lu’s portfolio of original personal content, AIGC and interaction design explorations, and professional experience.",
 };
 
 export default function RootLayout({

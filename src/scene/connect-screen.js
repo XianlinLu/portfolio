@@ -247,7 +247,7 @@ const FONT = {
   ]
 };
 function pixelString(h, text, cx, y, u, color) {
-  if (window.HW_LANG === "zh") {
+  if (window.PORTFOLIO_LANG === "zh") {
     h.save();
     h.font = `${u * 10}px sans-serif`;
     h.textAlign = "center";

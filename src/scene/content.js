@@ -322,6 +322,6 @@ function briefForm() {
     e.preventDefault();
     const d = new FormData(form);
     const note = form.querySelector(".f-note");
-    note.textContent = (window.HW_LANG === "zh" ? "留言预览（尚未发送）：" : "Message preview (not sent): ") + d.get("name") + " — " + d.get("contact") + " — " + (d.get("task") || "");
+    note.textContent = (window.PORTFOLIO_LANG === "zh" ? "留言预览（尚未发送）：" : "Message preview (not sent): ") + d.get("name") + " — " + d.get("contact") + " — " + (d.get("task") || "");
   });
 }

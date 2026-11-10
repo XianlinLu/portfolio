@@ -177,3 +177,5 @@
 @media (min-width: 801px) { .sw-fields input::placeholder { color: transparent; } }
 
 .sw-fields .hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+
+.portfolio-credit { margin: 2rem 0 0; padding: 1rem 0; font-size: 0.8rem; opacity: 0.7; letter-spacing: 0.02em; }

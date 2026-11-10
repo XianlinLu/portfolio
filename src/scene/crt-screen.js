@@ -3,8 +3,8 @@ const W = 1440, H = 1080;
 const FX = (W - 1350) / 2;
 async function loadFonts() {
   const faces = [
-    new FontFace("Coolvetica HC", "url(/sites/hello/assets/fonts/coolvetica-heavy-compressed.otf)"),
-    new FontFace("Inter", "url(/sites/hello/assets/fonts/inter/inter-latin-wght-normal.woff2)", { weight: "100 900", unicodeRange: "U+0000-00FF,U+2000-206F" })
+    new FontFace("Coolvetica HC", "url(/assets/fonts/coolvetica-heavy-compressed.otf)"),
+    new FontFace("Inter", "url(/assets/fonts/inter/inter-latin-wght-normal.woff2)", { weight: "100 900", unicodeRange: "U+0000-00FF,U+2000-206F" })
   ];
   await Promise.all(faces.map((f) => f.load().then((ff) => document.fonts.add(ff)).catch(() => {
   })));
@@ -35,7 +35,7 @@ function roundRect(g, x, y, w, h, r) {
 }
 async function makeScreenTexture() {
   await loadFonts();
-  const logo = await loadImage("/sites/hello/assets/hello-world-logo.png");
+  const logo = await loadImage("/assets/xianlin-mark.svg");
   const c = document.createElement("canvas");
   c.width = W;
   c.height = H;
@@ -140,7 +140,7 @@ function makeModernScreenTexture() {
   }
   g.globalAlpha = 1;
   const img = new Image();
-  img.src = "/sites/hello/assets/hello-world-logo.png";
+  img.src = "/assets/xianlin-mark.svg";
   const tex = new THREE.CanvasTexture(c);
   tex.colorSpace = THREE.SRGBColorSpace;
   tex.anisotropy = 8;

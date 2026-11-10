@@ -24,9 +24,9 @@
 @keyframes wave-fade { 0% { opacity: 0; } 8% { opacity: 1; } 75% { opacity: 1; } 100% { opacity: 0; } }
 
 .bg { inset: 0; }
-.bg95 { background: #008080 url(/sites/hello/assets/os/bg95-en.jpg) center / 100% 100% no-repeat; }
-.bg7 { background: #0d6cf0 url(/sites/hello/assets/os/bg7-en.jpg) center / 100% 100% no-repeat; }
-.bg7 .aero { display: none; }
+.bg95 { background: #008080; }
+.bg7 { background: radial-gradient(ellipse at 12% 75%, #a4f5ff, #138bf0 48%, #06469c); }
+
 .aero { position: absolute; inset: 0; }
 .aero::before { content: ""; position: absolute; inset: -20%; background: radial-gradient(ellipse 30% 22% at 82% 70%, #ffffffcc, transparent 70%), radial-gradient(ellipse 60% 40% at 90% 85%, #8ff4ff99, transparent 70%); filter: blur(10px); }
 .aero::after { content: ""; position: absolute; inset: 0; background:
@@ -35,9 +35,10 @@
   radial-gradient(ellipse 140% 90% at 120% 140%, transparent 59.7%, #ffffff70 60%, transparent 60.3%),
   radial-gradient(ellipse 160% 80% at -20% -30%, transparent 59.7%, #ffffffa0 60%, transparent 60.3%),
   radial-gradient(ellipse 150% 70% at -10% -40%, transparent 59.5%, #bfe9ff60 60%, transparent 60.5%); }
-.bg11 { background: #0b1a33 url(/sites/hello/assets/os/bg11.jpg) center / 100% 100% no-repeat; }
-.icons, .tbar > :not(.logo) { display: none !important; }
-.tbar { background: none !important; box-shadow: none !important; -webkit-backdrop-filter: none !important; backdrop-filter: none !important; }
+.bg11 { background: #0b1a33 url(../../public/assets/os/bg11.jpg) center / 100% 100% no-repeat; }
+.icons11, .tbar11 > :not(.logo) { display: none !important; }
+.tbar95 .logo, .tbar7 .logo { display: none; }
+.tbar11 { background: none !important; box-shadow: none !important; -webkit-backdrop-filter: none !important; backdrop-filter: none !important; }
 .tbar .logo { position: absolute; display: grid; place-items: center; }
 .tbar95 .logo { left: 12px; top: 8px; width: 48px; height: 54px; } .tbar95 .logo img { width: 40px; filter: invert(1); }
 .tbar7 .logo { left: 11px; top: -10px; width: 82px; height: 82px; border-radius: 50%; background: radial-gradient(circle at 50% 30%, #c5e8ff, #3a8bdc 45%, #0f3c80 75%); box-shadow: 0 0 16px #6cc0ffaa, inset 0 -6px 10px #082a5a; } .tbar7 .logo img { width: 46px; }
@@ -228,6 +229,6 @@
   .os-red, .os-red-vig { will-change: auto; }
 }
 @keyframes skin-fade { from { opacity: 0; } to { opacity: 1; } }
-html[lang="en"] .bg95 { background-image: url(/sites/hello/assets/os/bg95-en.jpg); }
-html[lang="en"] .bg7 { background-image: url(/sites/hello/assets/os/bg7-en.jpg); }
 .updbtn { touch-action: none; -webkit-touch-callout: none; }
+
+.tbar95 .logo, .tbar7 .logo { display: none; }

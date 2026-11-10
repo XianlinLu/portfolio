@@ -49,16 +49,16 @@ function makeOS() {
     <div class="icons icons95"><span>${ICON.pc}${L("", "My<br>computer")}</span><span>${ICON.folder}${L("", "My ideas")}</span><span>${ICON.bin}${L("", "Recycle Bin")}</span></div>
     <div class="icons icons7"><span>${G7.pc}${L("", "My<br>computer")}</span><span>${G7.folder}${L("", "My ideas")}</span><span>${G7.bin}${L("", "Recycle Bin")}</span></div>
     <div class="icons icons11"><span>${F11.pc}${L("", "My<br>computer")}</span><span>${F11.folder}${L("", "My ideas")}</span><span>${F11.bin}${L("", "Recycle Bin")}</span></div>
-    <div class="tbar tbar95"><span class="logo"><img src="/sites/hello/assets/hello-world-logo.png" alt=""></span><span class="start95"><img src="/sites/hello/assets/hello-world-logo.png" alt="">${L("", "Start")}</span><span class="task95">hello_world</span><span class="lbl95">OS 95</span><span class="clk95">09:41</span></div>
-    <div class="tbar tbar7"><span class="logo"><img src="/sites/hello/assets/hello-world-logo.png" alt=""></span><span class="orb7"><img src="/sites/hello/assets/hello-world-logo.png" alt=""></span><span class="task7">${G7.pc}hello_world</span><span class="lbl7">OS 7</span><span class="clk7">09:41</span></div>
-    <div class="tbar tbar11"><span class="logo"><img src="/sites/hello/assets/hello-world-logo.png" alt=""></span><span class="tb11"><i class="start11"><img src="/sites/hello/assets/hello-world-logo.png" alt=""></i><i>${F11.search}</i><i class="act">${F11.upd}</i><i>${F11.folder}</i><i>${F11.gear}</i></span>
+    <div class="tbar tbar95"><span class="logo"><img src="/assets/xianlin-mark.svg" alt=""></span><span class="start95"><img src="/assets/xianlin-mark.svg" alt="">${L("", "Start")}</span><span class="task95">xianlin_lu</span><span class="lbl95">OS 95</span><span class="clk95">09:41</span></div>
+    <div class="tbar tbar7"><span class="logo"><img src="/assets/xianlin-mark.svg" alt=""></span><span class="orb7"><img src="/assets/xianlin-mark.svg" alt=""></span><span class="task7">${G7.pc}xianlin_lu</span><span class="lbl7">OS 7</span><span class="clk7">09:41</span></div>
+    <div class="tbar tbar11"><span class="logo"><img src="/assets/xianlin-mark.svg" alt=""></span><span class="tb11"><i class="start11"><img src="/assets/xianlin-mark.svg" alt=""></i><i>${F11.search}</i><i class="act">${F11.upd}</i><i>${F11.folder}</i><i>${F11.gear}</i></span>
       <span class="tray11"><i>${F11.wifi}</i><i>${F11.vol}</i><i>${F11.bat}</i><b>09:41</b></span></div>
     <!-- ONE update window: the same structure on every OS, its skin morphs -->
     <section class="upd" aria-labelledby="updt">
-      <header><b>hello_world</b><span class="x" aria-hidden="true"><i>✕</i></span></header>
+      <header><b>xianlin_lu</b><span class="x" aria-hidden="true"><i>✕</i></span></header>
       <div class="updbody">
-        <span class="updicon"><i class="v95"><img src="/sites/hello/assets/os/upd95.png" alt=""></i><i class="v7"><img src="/sites/hello/assets/os/upd7.png" alt=""></i></span>
-        <div class="updtext"><p class="updt" id="updt">${L("", "Update available")}</p><p class="upds">hello_world OS <b class="updto">7</b></p>
+        <span class="updicon"><i class="v95"><img src="/assets/os/upd95.png" alt=""></i><i class="v7"><img src="/assets/os/upd7.png" alt=""></i></span>
+        <div class="updtext"><p class="updt" id="updt">${L("", "Update available")}</p><p class="upds">xianlin_lu OS <b class="updto">7</b></p>
           <div class="prog"><div class="seg">${blocks}</div><div class="bar7"><u></u></div></div></div>
       </div>
       <button class="updbtn" type="button"><span>${L("", "PRESS AND HOLD")}</span></button>
@@ -160,7 +160,7 @@ const ICONS = { "↗": "i-ne", "↻": "i-redo", "↓": "i-down", "→": "i-right
 const icon = (ch) => `<svg class="ico" aria-hidden="true"><use href="#${ICONS[ch] || "i-ne"}"/></svg>`;
 function dialog(id, cls, eyebrow, title, symbol, button, arrow) {
   return `<section class="os-dialog ${cls}" id="os-${id}" aria-labelledby="os-${id}-t" inert>
-    <div class="os-chrome"><span>hello_world/${id}</span><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span></div>
+    <div class="os-chrome"><span>xianlin_lu/${id}</span><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span></div>
     <div class="os-body"><p class="os-eyebrow">${eyebrow}</p><h2 class="os-title" id="os-${id}-t">${title}</h2></div>
     <button class="os-btn" type="button"><b>${button}</b>${icon(arrow)}</button></section>`;
 }

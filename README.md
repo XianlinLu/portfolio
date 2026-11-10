@@ -1,41 +1,42 @@
-# Xianlin Lu Portfolio
+# Xianlin Lu · Design & Technology
 
-Next.js 16 + React 19 + Three.js desktop portfolio. Chinese and English versions are available at `/?lang=zh` and `/?lang=en`.
+**[Visit the portfolio → https://xianlinlu.github.io/portfolio/](https://xianlinlu.github.io/portfolio/)**
 
-## Run
+[中文说明](README.zh-CN.md)
 
-Node.js 24 or later:
+A bilingual personal portfolio presenting Xianlin Lu’s original personal content, design explorations, and professional experience in AIGC, digital interaction, and visual communication.
+
+## Personal content
+
+Personal narratives and profile-based portfolio cards are created for Xianlin Lu. Biography, experience, education, and portrait are based on owner-provided materials. The cards summarize areas of practice and experience; they are not screenshots of completed client projects. Original-content statements refer to this personal content. Third-party software and media remain subject to their applicable licenses.
+
+## Development
+
+Use Node.js 24 or later:
 
 ```sh
 npm ci
 npm run dev
 ```
 
-Production:
+- `npm run check`: lint, TypeScript, and production build.
+- `npm run build` / `npm start`: standard Next.js production hosting.
+- `npm run build:pages`: static GitHub Pages build in `out/`, with `/portfolio` as the base path.
 
-```sh
-npm run build
-npm start
-```
+Pushes to `main` deploy through `.github/workflows/pages.yml`. English and Chinese versions are available at `?lang=en` and `?lang=zh`.
 
-Deploy as a Next.js project on Vercel, or use a Node.js host. No backend credentials are required. This is not a GitHub Pages static export.
+## Editing
 
-## Edit
+- `src/content/profile.ts`: bilingual biography, experience, education, and contact details.
+- `src/content/sections-en.json` and `sections-zh.json`: page content.
+- `src/content/scene-translations.json`: translated interactive labels.
+- `src/scene/`: room, CRT, desktop, work cards, audio, and animation modules.
+- `public/assets/works/manifest.json`: portfolio card images and dimensions.
+- `public/assets/xianlin-mark.svg`: personal monogram.
+- `public/images/xianlin-lu.png`: portrait.
 
-- `src/content/profile.ts`: bilingual experience, education, public contact links.
-- `src/content/sections-en.json`, `sections-zh.json`: editable homepage section markup.
-- `src/content/scene-translations.json`: Chinese scene/dialog strings.
-- `src/scene/`: separate room, cable, CRT, OS, works, phone, cursor, audio and animation modules.
-- `src/app/style.css`, `os.css`, `about.css`: desktop design rules.
-- `public/sites/hello/assets/works/manifest.json`: work cards; replace with your own images and dimensions.
-- `public/images/xianlin-lu.png`: user-supplied portrait.
+The scene bundle is generated before development and production builds. After editing scene modules during an active development session, run `node scripts/build-scene.mjs` and reload the browser.
 
-The scene bundle is rebuilt automatically before `dev` and `build`. Editing scene source while dev is already running requires `node scripts/build-scene.mjs` and a browser reload.
+## Current scope
 
-The contact form validates input and shows a local preview. It does not submit, email, store, or transmit the message. Email/LinkedIn/Behance links are normal external links.
-
-## Content and scope
-
-Reference: https://helloworlddsgn.com/ . User confirmed permission to reuse reference code and media. The 3D/scroll/UI structure is adapted from the authorized reference. Personal copy and portrait are user-provided. Reference project images containing another person's identity or Ukrainian text are excluded. Work cards are designed from profile facts, not screenshots of completed client projects. Personalization, Chinese typography, the experience section, and profile cards intentionally differ from the reference.
-
-Only `/` is implemented. No mobile navigation or mobile breakpoints. Main visual target: 1440px desktop. WebGL is required for the 3D story; readable content remains available if its model cannot load.
+The interactive story is designed primarily for desktop and requires WebGL. The contact form validates input and displays a local preview; it does not send or store messages. Public email and social links provide direct contact options.

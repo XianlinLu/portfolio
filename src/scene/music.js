@@ -6,7 +6,7 @@ if (btn) {
     off = localStorage.getItem(KEY) === "off";
   } catch {
   }
-  const audio = new Audio("/sites/hello/assets/audio/ambient.mp3");
+  const audio = new Audio("/assets/audio/ambient.mp3");
   audio.loop = true;
   audio.preload = "none";
   audio.crossOrigin = "anonymous";

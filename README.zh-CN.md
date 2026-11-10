@@ -1,29 +1,42 @@
-# Xianlin Lu 个人网站
+# Xianlin Lu · 设计与科技
 
-基于 Next.js 16、React 19 和 Three.js 的桌面端作品集，支持中英文切换。
+**[访问个人作品集 → https://xianlinlu.github.io/portfolio/](https://xianlinlu.github.io/portfolio/)**
 
-## 启动
+[English](README.md)
 
-需要 Node.js 24 或更新版本。
+展示 Xianlin Lu 原创个人内容、设计探索与专业经历的中英双语作品集，涵盖 AIGC、数字交互与视觉传达。
+
+## 原创个人内容
+
+个人叙事与基于履历的展示卡片为 Xianlin Lu 专门创作。个人介绍、工作经历、教育背景及肖像依据本人提供的资料整理。展示卡片用于呈现研究方向和专业经历，不冒充已完成客户项目的实物截图。原创声明适用于上述个人内容；第三方软件和媒体遵循各自适用的许可。
+
+## 本地开发
+
+使用 Node.js 24 或更新版本：
 
 ```sh
 npm ci
 npm run dev
 ```
 
-生产构建：`npm run build`，运行：`npm start`。可部署到 Vercel 或支持 Node.js 的主机。
+- `npm run check`：运行 ESLint、TypeScript 检查及生产构建。
+- `npm run build` / `npm start`：常规 Next.js 部署。
+- `npm run build:pages`：生成 GitHub Pages 静态文件到 `out/`，使用 `/portfolio` 路径前缀。
 
-## 内容编辑
+推送到 `main` 后，由 `.github/workflows/pages.yml` 自动部署。中文与英文版本分别使用 `?lang=zh` 和 `?lang=en`。
 
-- `src/content/profile.ts`：双语经历、教育和联系方式。
+## 内容维护
+
+- `src/content/profile.ts`：双语个人资料、履历及联系方式。
 - `src/content/sections-en.json`、`sections-zh.json`：页面内容。
-- `src/content/scene-translations.json`：场景与弹窗翻译。
-- `src/scene/`：独立的场景、作品、手机、声音与交互模块。
-- `public/images/xianlin-lu.png`：个人照片。
-- `public/sites/hello/assets/works/manifest.json`：作品卡片清单。
+- `src/content/scene-translations.json`：交互界面译文。
+- `src/scene/`：房间、屏幕、桌面、作品、声音与动画模块。
+- `public/assets/works/manifest.json`：作品卡片图片和尺寸。
+- `public/assets/xianlin-mark.svg`：个人字母标识。
+- `public/images/xianlin-lu.png`：个人肖像。
 
-首页保留参考网站的 3D 房间、连接网线、滚动镜头、模拟系统更新、弹窗、分类切换和重播结构。个人信息、照片及中文排版已适配 Xianlin Lu。当前作品卡片依据个人经历绘制，实际作品通过 Behance 与个人作品集链接访问，可自行替换为项目图片。
+场景脚本在开发和构建前自动生成。开发服务器运行期间修改场景模块后，运行 `node scripts/build-scene.mjs` 并刷新浏览器。
 
-联系表单只在浏览器中生成预览，不发送或保存信息。仅实现当前首页，不包含移动端专用布局。主验收宽度为 1440px。
+## 当前功能范围
 
-详细说明见 [README](README.md)。
+互动故事主要面向桌面浏览器，需要 WebGL。联系表单仅校验输入并提供本地预览，不发送或保存留言；可通过公开邮箱与社交链接直接联系。

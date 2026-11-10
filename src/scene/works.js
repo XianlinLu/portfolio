@@ -70,7 +70,7 @@ async function init(root2) {
   });
   const postScene = new THREE.Scene(), postCam = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
   postScene.add(new THREE.Mesh(new THREE.PlaneGeometry(2, 2), post));
-  const manifest = await fetch("/sites/hello/assets/works/manifest.json").then((r) => r.json());
+  const manifest = await fetch("/assets/works/manifest.json").then((r) => r.json());
   const loader = new THREE.ImageBitmapLoader();
   loader.setOptions({ imageOrientation: "flipY", premultiplyAlpha: "none" });
   const PHONE = innerWidth < 800 || matchMedia("(hover: none)").matches, CARD_PX = 420;
@@ -109,7 +109,7 @@ async function init(root2) {
       m.position.set(Math.cos(a) * r, Math.sin(a) * r, z);
       m.lookAt(m.position.x * 0.25, m.position.y * 0.25, z + 6);
       m.rotateZ(Math.sin(a * 1.7) * 0.22);
-      m.userData = { src: "/sites/hello/assets/works/" + it.f, video: it.video ? "/sites/hello/assets/works/" + it.video : null, loaded: false, ch: c, asp };
+      m.userData = { src: "/assets/works/" + it.f, video: it.video ? "/assets/works/" + it.video : null, loaded: false, ch: c, asp };
       spiral.add(m);
       cards.push(m);
     });
@@ -258,7 +258,7 @@ async function init(root2) {
       shown = s.c;
       const ch = CHAPTERS[s.c];
       $(".works-title", copy).textContent = ch.t;
-      $(".works-sub", copy).textContent = `( ${ch.s} ) — ${window.HW_LANG === "zh" ? "个人经历视觉卡片" : "Profile visual cards"}`;
+      $(".works-sub", copy).textContent = `( ${ch.s} ) — ${window.PORTFOLIO_LANG === "zh" ? "个人经历视觉卡片" : "Profile visual cards"}`;
       dots.forEach((b, i) => b.classList.toggle("on", i === s.c));
     }
     copy.style.opacity = s.alpha.toFixed(3);

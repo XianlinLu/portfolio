@@ -1,7 +1,7 @@
 import * as THREE from "three";
 import { RoundedBoxGeometry } from "three/addons/geometries/RoundedBoxGeometry.js";
 import { RoomEnvironment } from "three/addons/environments/RoomEnvironment.js";
-const TILES = ["/sites/hello/assets/works/static-1.png","/sites/hello/assets/works/static-2.png","/sites/hello/assets/works/static-3.png","/sites/hello/assets/works/static-4.png","/sites/hello/assets/works/web-1.png","/sites/hello/assets/works/web-2.png","/sites/hello/assets/works/web-3.png","/sites/hello/assets/works/web-4.png","/sites/hello/assets/works/motion-1.png","/sites/hello/assets/works/motion-2.png","/sites/hello/assets/works/motion-3.png","/sites/hello/assets/works/motion-4.png","/sites/hello/assets/works/brand-1.png","/sites/hello/assets/works/brand-2.png","/sites/hello/assets/works/brand-3.png","/sites/hello/assets/works/brand-4.png"];
+const TILES = ["/assets/works/static-1.png","/assets/works/static-2.png","/assets/works/static-3.png","/assets/works/static-4.png","/assets/works/web-1.png","/assets/works/web-2.png","/assets/works/web-3.png","/assets/works/web-4.png","/assets/works/motion-1.png","/assets/works/motion-2.png","/assets/works/motion-3.png","/assets/works/motion-4.png","/assets/works/brand-1.png","/assets/works/brand-2.png","/assets/works/brand-3.png","/assets/works/brand-4.png"];
 const still = () => document.documentElement.classList.contains("reduce-motion");
 const load = (src) => new Promise((ok) => {
   const im = new Image();

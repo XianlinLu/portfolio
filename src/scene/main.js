@@ -192,7 +192,7 @@ function cardboardify(mat, opts = { reveal: true }) {
 let screenMesh = null, lampBulb = null, crtMat = null, modernScreen = null, lampBulbNew = null;
 const NO_SHADOW_CASTERS = /^floor|night sky/i;
 const glowColor = { "LAMP BULB": ["#ffd9a0", 8], "PC LED": ["#3dff7a", 3], "CLOCK LED": ["#ff2a1a", 3] };
-const neonTex = new THREE.TextureLoader().load("/sites/hello/assets/hello-world-logo.png", (t) => t.colorSpace = THREE.SRGBColorSpace);
+const neonTex = new THREE.TextureLoader().load("/assets/xianlin-mark.svg", (t) => t.colorSpace = THREE.SRGBColorSpace);
 function eraOf(o) {
   for (let p = o; p; p = p.parent) if (p.userData && p.userData.era) return p.userData.era;
   return null;
@@ -920,7 +920,7 @@ const tick = setInterval(() => {
     statusEl.textContent = BOOT[st][1];
   }
 }, 40);
-const ROOM_URL = "/sites/hello/assets/room-v6-m.glb";
+const ROOM_URL = "/assets/room-v6-m.glb";
 new GLTFLoader().setMeshoptDecoder(MeshoptDecoder).load(
   ROOM_URL,
   async (gltf) => {
