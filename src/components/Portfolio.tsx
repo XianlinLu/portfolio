@@ -3,7 +3,6 @@
 import Script from "next/script";
 import { useSearchParams } from "next/navigation";
 import { PortfolioSection } from "@/components/PortfolioSection";
-import { Experience } from "@/components/Experience";
 import type { Locale } from "@/content/profile";
 
 export function PortfolioContent({ locale, interactive = false }: { locale: Locale; interactive?: boolean }) {
@@ -11,7 +10,6 @@ export function PortfolioContent({ locale, interactive = false }: { locale: Loca
     <PortfolioSection name="story" locale={locale} />
     <div className="content" id="content">
       <PortfolioSection name="about" locale={locale} />
-      <Experience locale={locale} />
       <PortfolioSection name="numbers" locale={locale} />
       <PortfolioSection name="work" locale={locale} />
       <PortfolioSection name="contact" locale={locale} />

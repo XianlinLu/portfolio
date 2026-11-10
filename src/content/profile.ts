@@ -9,7 +9,7 @@ export const identity = {
   email: "luxianlin68@gmail.com",
   linkedin: "https://www.linkedin.com/in/xianlin-lu/",
   behance: "https://www.behance.net/xianlinlu",
-  portfolio: "https://luxianlin68.myportfolio.com/",
+  portfolio: "https://xianlinlu.webflow.io/",
   skills: ["ComfyUI", "Figma", "AI agent"],
 } as const;
 

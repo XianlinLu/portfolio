@@ -258,7 +258,7 @@ async function init(root2) {
       shown = s.c;
       const ch = CHAPTERS[s.c];
       $(".works-title", copy).textContent = ch.t;
-      $(".works-sub", copy).textContent = `( ${ch.s} ) — ${window.PORTFOLIO_LANG === "zh" ? "个人经历视觉卡片" : "Profile visual cards"}`;
+      $(".works-sub", copy).textContent = `( ${ch.s} )`;
       dots.forEach((b, i) => b.classList.toggle("on", i === s.c));
     }
     copy.style.opacity = s.alpha.toFixed(3);
