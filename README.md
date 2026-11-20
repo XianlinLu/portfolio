@@ -10,7 +10,7 @@ A bilingual personal portfolio presenting Xianlin Lu’s original personal conte
 
 Personal biography and portrait are based on owner-provided materials. The homepage uses a compact introduction rather than a full experience and education list. The gallery images, videos, and eight figures are visual references supplied for the requested presentation; they are not claims about Xianlin Lu’s authorship or client results. Original-content statements apply only to personal biography. Third-party software and media remain subject to their applicable licenses.
 
-The My Portfolio button opens https://xianlinlu.webflow.io/ in a new tab.
+The My Portfolio button opens https://xianlinlu.github.io/Work/ in a new tab.
 
 ## Development
 

@@ -10,7 +10,7 @@
 
 个人介绍与肖像依据本人提供的资料整理。首页采用精简介绍，不展开完整工作与教育履历。图库图片、视频及八组数字用于指定的视觉参考展示，不表示 Xianlin Lu 创作了这些作品或取得了对应客户成果。原创声明仅适用于个人介绍；第三方软件和媒体遵循各自适用的许可。
 
-“My Portfolio”按钮在新标签页打开 https://xianlinlu.webflow.io/。
+“My Portfolio”按钮在新标签页打开 https://xianlinlu.github.io/Work/。
 
 ## 本地开发
 
